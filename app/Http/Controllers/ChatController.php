@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Message;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -34,6 +35,18 @@ class ChatController extends Controller
         ]);
 
         return ['status' => 'Message Sent!'];
+    }
+
+
+    /**
+     * Fetch all messages
+     *
+     * @return Message
+     */
+    public function fetchMessages()
+    {
+        //Lazy loading -> Eager Loading
+        return Message::with('user')->get();
     }
 
 }
