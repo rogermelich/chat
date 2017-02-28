@@ -1,14 +1,14 @@
 @extends('adminlte::page')
 
 @section('htmlheader_title')
-	Change Title here!
+    Change Title here!
 @endsection
 
 
 @section('main-content')
-	<div class="container-fluid spark-screen">
-		<div class="row">
-			<div class="col-md-9 col-md-offset-1">
+    <div class="container-fluid spark-screen">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1">
 
                 <div class="box box-primary direct-chat direct-chat-primary">
                     <div class="box-header with-border">
@@ -16,11 +16,14 @@
 
                         <div class="box-tools pull-right">
                             <span data-toggle="tooltip" title="3 New Messages" class="badge bg-light-blue">3</span>
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                        class="fa fa-minus"></i>
                             </button>
-                            <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                            <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts"
+                                    data-widget="chat-pane-toggle">
                                 <i class="fa fa-comments"></i></button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i
+                                        class="fa fa-times"></i></button>
                         </div>
                     </div>
                     <!-- /.box-header -->
@@ -34,7 +37,8 @@
                                     <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                                 </div>
                                 <!-- /.direct-chat-info -->
-                                <img class="direct-chat-img" src="./img/user1-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                                <img class="direct-chat-img" src="./img/user1-128x128.jpg" alt="Message User Image">
+                                <!-- /.direct-chat-img -->
                                 <div class="direct-chat-text">
                                     Is this template really for free? That's unbelievable!
                                 </div>
@@ -49,7 +53,8 @@
                                     <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                                 </div>
                                 <!-- /.direct-chat-info -->
-                                <img class="direct-chat-img" src="./img/user3-128x128.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                                <img class="direct-chat-img" src="./img/user3-128x128.jpg" alt="Message User Image">
+                                <!-- /.direct-chat-img -->
                                 <div class="direct-chat-text">
                                     You better believe it!
                                 </div>
@@ -85,6 +90,7 @@
                     <!-- /.box-body -->
                     <div class="box-footer">
                         <form action="#" method="post">
+                            {{ csrf_field() }}
                             <div class="input-group">
                                 <input type="text" name="message" placeholder="Type Message ..." class="form-control">
                                 <span class="input-group-btn">
@@ -96,7 +102,7 @@
                     <!-- /.box-footer-->
                 </div>
 
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 @endsection

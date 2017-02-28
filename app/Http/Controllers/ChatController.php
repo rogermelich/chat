@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 
 class ChatController extends Controller
@@ -28,7 +29,7 @@ class ChatController extends Controller
     {
         $user = Auth::user();
 
-        $message = $user->messages()->create([
+        $user->messages()->create([
             'message' => $request->input('message')
         ]);
 
