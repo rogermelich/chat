@@ -57,6 +57,8 @@ import Echo from "laravel-echo"
 //     key: 'your-pusher-key'
 // });
 
+import io from 'socket.io-client'
+windows.io = io
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
