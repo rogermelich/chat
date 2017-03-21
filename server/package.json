@@ -23,7 +23,29 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
+    "express": "^4.15.2",
+    "http": "0.0.0",
+    "ioredis": "^2.5.0",
     "laravel-echo": "^1.2.5",
-    "pusher-js": "^4.0.0"
-  }
+    "pusher-js": "^4.0.0",
+    "socket.io": "^1.7.3"
+  },
+  "name": "chat",
+  "description": "<p align=\"center\"><img src=\"https://laravel.com/assets/img/components/logo-laravel.svg\"></p>",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogermelich/chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogermelich/chat/issues"
+  },
+  "homepage": "https://github.com/rogermelich/chat#readme"
 }
