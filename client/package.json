@@ -1,10 +1,14 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "author": "Roger Melich Curto",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^1.7.3"
+  }
 }
