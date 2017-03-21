@@ -5,9 +5,19 @@ var Redis = require('ioredis');
 
 var redis = new Redis();
 
+redis.psubscribe('*', function(err, count) {
+    console.log('Errors subscribing to channel');
+    if (err) {
+        console.log('Errors subscribing to channel: ' + err);
+    }
+});
 
-io.emit('chat', function () {
-
+redis.on('pmessage', function(subscribed,channel, message) {
+    console.log('Message Recieved at channel(' + channel + '): ' + message);
+    message = JSON.parse(message);
+    console.log(channel)
+    console.log(message.event)
+    io.emit(channel + ':' + message.event, message.data);
 });
 
 http.listen(3000, function() {
