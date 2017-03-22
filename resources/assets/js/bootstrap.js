@@ -62,5 +62,7 @@ windows.io = io
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
-    host: 'http://localhost:3000'
+    host: window.location.hostname + ':6001'
 });
+
+console.log(window.location.hostname)
