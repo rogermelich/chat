@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace RogerMelich\Chat;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -182,11 +182,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        RogerMelich\Chat\Providers\AppServiceProvider::class,
+        RogerMelich\Chat\Providers\AuthServiceProvider::class,
+        // RogerMelich\Chat\Providers\BroadcastServiceProvider::class,
+        RogerMelich\Chat\Providers\EventServiceProvider::class,
+        RogerMelich\Chat\Providers\RouteServiceProvider::class,
 
     ],
 

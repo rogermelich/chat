@@ -16182,12 +16182,14 @@ Vue.component('login-input-field', __webpack_require__(101));
 // });
 
 
-windows.io = __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default.a;
+window.io = __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default.a;
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'socket.io',
-  host: 'http://localhost:3000'
+  host: window.location.hostname + ':6001'
 });
+
+console.log(window.location.hostname);
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),

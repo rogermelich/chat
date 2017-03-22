@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace RogerMelich\Chat\Http\Controllers;
 
-use App\Message;
+use RogerMelich\Chat\Message;
 use Auth;
 use Illuminate\Http\Request;
 
