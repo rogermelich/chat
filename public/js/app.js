@@ -16186,7 +16186,8 @@ window.io = __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default.a;
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'socket.io',
-  host: window.location.hostname + ':6001'
+  host: window.location.hostname + ':6001',
+  namespace: 'RogerMelich.Chat'
 });
 
 console.log(window.location.hostname);
