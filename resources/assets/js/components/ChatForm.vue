@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="input-group">
-            <input type="text" name="message" placeholder="Type Message ..." class="form-control" v-model="newMessage" @keyup.enter="sendMessage">
+            <input type="text" name="message" placeholder="Type Message ..." class="form-control" v-model="newMessage"
+                   @keyup.enter="sendMessage">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-primary btn-flat" @click="sendMessage">Send</button>
             </span>
@@ -11,13 +12,13 @@
 
 <script>
     export default {
-      props: ['user'],
-      data() {
+        props: ['user'],
+        data() {
             return {
                 newMessage: ''
             }
         },
-      methods: {
+        methods: {
             sendMessage() {
                 this.$emit('messagesent', {
                     user: this.user,
@@ -25,6 +26,6 @@
                 });
                 this.newMessage = ''
             }
-      }
+        }
     }
 </script>
