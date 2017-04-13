@@ -2,13 +2,13 @@
 
 namespace RogerMelich\Chat\Http\Controllers;
 
+use RogerMelich\Chat\Events\MessageSent;
 use RogerMelich\Chat\Message;
 use Auth;
 use Illuminate\Http\Request;
 
 class ChatController extends Controller
 {
-    //
     /**
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -16,7 +16,7 @@ class ChatController extends Controller
     public function index()
     {
         $data = [];
-        return view('chat', $data);
+        return view('chat',$data);
     }
 
 
@@ -34,8 +34,8 @@ class ChatController extends Controller
             'message' => $request->input('message')
         ]);
 
-        //Add Broadcast
-        broadcast(new MessageSent($user,$message))->toOthers();
+        // Broadcast
+        broadcast(new MessageSent($user, $message))->toOthers();
 
         return ['status' => 'Message Sent!'];
     }
